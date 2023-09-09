@@ -1,0 +1,101 @@
+body {
+  background: #03042c;
+}
+.center {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  color: #fff;
+  padding: 20px 100px;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: 0.5s;
+}
+.center::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+.center span:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 2px;
+  background: linear-gradient(to right, #0c002b, #1779ff);
+  animation: anim1 2s linear infinite;
+}
+@keyframes anim1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.center span:nth-child(2) {
+  position: absolute;
+  width: 2px;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0c002b, #1779ff);
+  animation: anim2 2s linear infinite;
+}
+@keyframes anim2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.center span:nth-child(3) {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  right: 0px;
+  height: 2px;
+  background: linear-gradient(to left, #0c002b, #1779ff);
+  animation: anim3 2s linear infinite;
+}
+@keyframes anim3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.center span:nth-child(4) {
+  position: absolute;
+  width: 2px;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: linear-gradient(to top, #0c002b, #1779ff);
+  animation: anim4 2s linear infinite;
+}
+@keyframes anim4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.center:hover {
+  background: #eeeb18;
+  box-shadow: 0px 25px 50px #eeeb18;
+  color: #000;
+}
+.center:hover span {
+  background: #eeeb1b;
+  font-weight: 700;
+}
